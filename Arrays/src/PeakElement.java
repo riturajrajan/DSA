@@ -30,8 +30,10 @@ public class PeakElement {
          */
         if(neighbours[currIndex] > neighbours[nextIndex]) {
             output.add(neighbours[currIndex]);
+            currIndex++;            //Increase the pointer so that while loop start with
+            nextIndex++;            //latest index because comparion start here if element has more than 1 element
         }
-        while(nextIndex != arrLen-1) {
+        while(nextIndex < arrLen-1) {
             prevIndex = currIndex;
             currIndex = nextIndex;
             nextIndex = nextIndex + 1;
