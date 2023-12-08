@@ -8,9 +8,11 @@ public class MinAndMaxElement {
          * Traverse the array and check the value against min and max and assign value accordingly.
          * Complexity is O(n)
          */
-        int[] arr = {-10, 5, 40, 80, 1};
+        int[] arr = {10, 5, 40, 80, 1};
         int currIndex = 0, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
-        while(currIndex != arr.length) {
+        int len = arr.length;
+
+        while(currIndex != len) {
             if(arr[currIndex] > max) {
                 max = arr[currIndex];
             } else if(arr[currIndex] < min) {
@@ -26,7 +28,7 @@ public class MinAndMaxElement {
          * Complexity is O(n)
          */
         Arrays.sort(arr);
-        System.out.println("Max element: " + max  + " Min Element: " + min);
+        System.out.println("Max element: " + arr[len-1]  + " Min Element: " + arr[0]);
 
         //Third Approach
         /*
