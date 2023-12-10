@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class SortAscending {
 
     public static void main(String[] args) {
-        int[] arr = {1,-10};
+        int[] arr = {1, 10, 2 , 5 , 88 , 1, 8, 44, 56, 22, 99, 101, 100};
 
         //Using inbuilt Arrays function
         /*Arrays.sort((arr));
@@ -22,7 +22,8 @@ public class SortAscending {
          * Inbetween swap the element if i > j
          */
         int temp;
-        for(int i = 0; i <= arr.length-2; i++) {
+
+        /*for(int i = 0; i <= arr.length-2; i++) {
             for(int j = i+1; j<= arr.length-1; j++) {
                 if(arr[i] > arr[j]) {
                     temp = arr[j];
@@ -33,6 +34,29 @@ public class SortAscending {
         }
         for(int i: arr) {
             System.out.println(i);
+        }*/
+
+        //Recursive Approach
+        ascendingArray(arr, 0, arr.length);
+        for (int i : arr){
+            System.out.println(i);
         }
+    }
+
+    public static void ascendingArray(int[] arr, int parentIndex, int length) {
+        if(parentIndex == length-1) {
+            return;
+        }
+        int j = parentIndex +1, temp;
+        while(j <= length-1) {
+            if(arr[parentIndex] > arr[j]) {
+                temp = arr[j];
+                arr[j] = arr[parentIndex];
+                arr[parentIndex] = temp;
+            }
+            j++;
+        }
+        ascendingArray(arr, ++parentIndex, length);
+
     }
 }
