@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/peak_element_not_smaller_than_neighbours.iml" filepath="$PROJECT_DIR$/peak_element_not_smaller_than_neighbours.iml" />
+    </modules>
+  </component>
+</project>
