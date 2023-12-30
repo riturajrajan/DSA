@@ -1,20 +1,9 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Demo {
-    public static int sumNum;
     public static void main(String[] args) {
-        String s = "ABCDCB";
-        System.out.println(sum(s, 0, s.length()-1));
+        int noOfQueen = 4;
+        int[][] chessBoard = new int[noOfQueen][noOfQueen];
+        System.out.println(chessBoard.length);
     }
-
-    public static boolean sum(String s, int start, int end) {
-        if(start == end) return true;
-        if(s.charAt(start) == s.charAt(end)) {
-            return sum(s, start+1, end-1);
-        }
-        return false;
-    }
-
 }

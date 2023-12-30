@@ -23,7 +23,7 @@ public class SortAscending {
          */
         int temp;
 
-        /*for(int i = 0; i <= arr.length-2; i++) {
+        for(int i = 0; i <= arr.length-2; i++) {
             for(int j = i+1; j<= arr.length-1; j++) {
                 if(arr[i] > arr[j]) {
                     temp = arr[j];
@@ -34,7 +34,7 @@ public class SortAscending {
         }
         for(int i: arr) {
             System.out.println(i);
-        }*/
+        }
 
         //Recursive Approach
         ascendingArray(arr, 0, arr.length);
