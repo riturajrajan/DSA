@@ -25,16 +25,16 @@ public class NQueen {
             }
         }
         List<List<String>> ans = new ArrayList<>();
-//        findNQueen(0, chessboard, ans);
+        findNQueen(0, chessboard, ans);
         int i = 0;
-//        for (List < String > it: ans) {
-//            System.out.println("Arrangement " + i);
-//            for (String s: it) {
-//                System.out.println(s);
-//            }
-//            System.out.println();
-//            i += 1;
-//        }
+        for (List < String > it: ans) {
+            System.out.println("Arrangement " + i);
+            for (String s: it) {
+                System.out.println(s);
+            }
+            System.out.println();
+            i += 1;
+        }
         //Approach 2-----------------------------------------
         int[] leftRow = new int[noOFQueen];
         int[] lowerDiagonal = new int[2 * noOFQueen - 1];
@@ -101,6 +101,8 @@ public class NQueen {
     /* Approach 2: Using Hashing
      * There is a formula to calculate upper and lower diagonal. Upper Diagonal is (n-1)+(col-row) and for lower left
      * diagonal is (row+col). The length of the hashing is calculated as (2n-1).
+     * Time Complexity: O(N!*N)
+     * Space Complexity: O(N)
      * https://takeuforward.org/data-structure/n-queen-problem-return-all-distinct-solutions-to-the-n-queens-puzzle/
      */
     private static void fillQueen(int col, char[][] chessboard, List<List<String>> ans, int[] leftRow, int[] lowerDiagonal, int[] upperDiagonal) {
