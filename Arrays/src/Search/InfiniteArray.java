@@ -15,7 +15,7 @@ public class InfiniteArray {
         while (i < arr.length && arr[i] < num) {
              i *= 2;
         }
-        i = Math.min(i, arr.length - 1);   //This is a corner case where i exceeds length of the array
+        i = Math.min(i, arr.length - 1);   //This is a corner case where i exceeds length of the array. Ask interviewer whether he can give limited size as well then add this
         if(arr[i] == num) return i;
         return binarySearch(arr, i/2+1, i-1, num);
     }
