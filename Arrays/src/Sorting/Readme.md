@@ -13,6 +13,8 @@ Heap sort
 Quick sort  
 Hybrid Algo  
 TimSort - Used in python is a combination of insertion and merge sort  
-IntroSort - Quick, Heap and Insertion sort. Used in C++
-
-
+IntroSort - Quick, Heap and Insertion sort. Used in C++  
+  
+Arrays has sort function and Collection class as well, Arrays can sort both primitive and non-primitive but   
+Collection can only sort non-primitive. Arrays used Dual Pivot QuickSort for primitive and merge sort  
+with TimSort for non-primitive, Quick sort is unstable and merge sort is stable
