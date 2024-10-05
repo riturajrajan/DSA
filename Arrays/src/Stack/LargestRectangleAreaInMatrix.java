@@ -4,8 +4,9 @@ import java.util.ArrayDeque;
 
 public class LargestRectangleAreaInMatrix {
     public static void main(String[] args) {
-        //We will use idea of largest area inside histogram. One by one we will pass a single row considering as a single array and maxAreaInHistogram will return max area
-        //If row is 1 or greater we need to pass the sum of upper single array passed. If the current element is 0 then simply we add in array
+        //We will use idea of the largest area inside histogram. One by one we will pass a single row considering as a single array and maxAreaInHistogram will return max area
+        //If row is 1 or greater we need to pass the sum of upper single array passed. If the current element is 0 then simply we add in array. Time Complexity is
+        // O(Row*Col). If space is giver then we can use prefix sum to pre-calculate the sum of the array at every row level.
         int[][] matrix = {{0, 1, 1, 0}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 0, 0}};
         int maxArea = maxAreaInHistogram(matrix[0]);
         for (int row = 1; row < matrix.length; row++) {
