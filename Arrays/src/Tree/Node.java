@@ -1,8 +1,8 @@
 package Tree;
 
 public class Node {
-    Node left;
-    Node right;
+    public Node left;
+    public Node right;
     int key;
 
     Node(int key) {
