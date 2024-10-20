@@ -10,7 +10,7 @@ public class Frequency {
         Map<Number, Number> frequency = new HashMap<>();
         for(int i = 0; i < arr.length; i++) {
             if(frequency.containsKey(arr[i])) {
-                frequency.put(arr[i], ((int)frequency.get(arr[i])) + 1);
+                frequency.put(arr[i], (frequency.get(arr[i]).intValue()) + 1);
             } else {
                 frequency.put(arr[i], 1);
             }

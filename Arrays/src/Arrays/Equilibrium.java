@@ -13,6 +13,7 @@ public class Equilibrium {
             rightSum = rightSum - arr[i];
             if(rightSum == leftSum) {
                 System.out.println("Yes");
+                System.out.println(i);
             }
             leftSum = leftSum + arr[i];
         }

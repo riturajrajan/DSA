@@ -33,11 +33,24 @@ public class MajorityElement {
         //element cancel out each other occurence and cannot be the majority element. This algo say that majority element found can be the majority so for safety we will run the loop on
         //array and confirm the count of element found by Moore Algo. Ex -> {8, 7, 6, 8, 8, 1, 1, 1}. Moore will say that 1 is majority but when we iterate over array and check the count
         //we will see 1 is not the majority element.
-        int count = 0, currIndex = 0;
-        for(int i = 0; i < arr.length; i++) {
-
+        int count = 1, majority = 0;
+        for(int i = 1; i < arr.length; i++) {
+            count = arr[i] == arr[majority] ? count + 1 : count - 1;
+            if(count == 0) {
+                majority = i;
+                count = 1;
+            }
         }
-
+        //Now we need to check here if the majority element is really occuring more number of time
+        count = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == arr[majority]) count++;
+        }
+        if(count <= (arr.length / 2)) {
+            System.out.println("No majority element");
+        } else {
+            System.out.println("Majority Element is: " + arr[majority]);
+        }
 
     }
 }
