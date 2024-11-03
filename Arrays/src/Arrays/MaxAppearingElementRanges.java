@@ -12,8 +12,8 @@ public class MaxAppearingElementRanges {
         int[] freq = new int[101];  //We need 101 because we are doing right[i]+1 which can increase 100 size
         int res = 0;
         for(int i = 0; i < left.length; i++) {          //This for loop will mark the starting and ending of a range
-            freq[left[i]] = 1;
-            freq[right[i]+1] = -1;
+            freq[left[i]]++;
+            freq[right[i]+1]--;
         }
         for(int i = 1; i < freq.length; i++) {
             freq[i] = freq[i] + freq[i-1];              //Here we are doing prefix sum

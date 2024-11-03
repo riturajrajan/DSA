@@ -13,13 +13,13 @@ public class CombinationSumRecursion {
          * Time complexity will be O(2^t * k) -> Since we will pick or not pick the index so probability will be 2^t and at the end
          * we are copying from one data structure to another which will take k times.
          */
-        int[] arr = {1, 2, 2};
+        int[] arr = {1, 2, 2, 3};
         List<Integer> combination = new ArrayList<>();
         List<List<Integer>> output = new ArrayList<>();
         List<List<Integer>> output2 = new ArrayList<>();
         Set<List<Integer>> output1 = new HashSet<>();
         List<Integer> sumIncreasing = new ArrayList<>();
-//        combinationSum(arr, 2, combination, output, 0);
+//        combinationSum(arr, 3, combination, output, 0);
 //        output.stream().forEach(singleList -> {
 //            System.out.println(singleList);
 //        });
@@ -35,14 +35,14 @@ public class CombinationSumRecursion {
 //            System.out.println(singleList);
 //        });
 //        -------------------
-//        sumOfAllSubsetIncreasingOrder(0, arr, sumIncreasing, 0);
-//        output.forEach(singleList -> singleList.stream().reduce(0, (acc, element) -> acc + element));
-//        sumIncreasing.stream().sorted().forEach(element -> System.out.println(element));
+        sumOfAllSubsetIncreasingOrder(0, arr, sumIncreasing, 0);
+        output.forEach(singleList -> singleList.stream().reduce(0, (acc, element) -> acc + element));
+        sumIncreasing.stream().sorted().forEach(element -> System.out.println(element));
 //        ------------------
-        subsetWithNoDuplicate(arr, 0, output1, combination);
-        output1.stream().forEach(singleList -> {
-            System.out.println(singleList);
-        });
+//        subsetWithNoDuplicate(arr, 0, output1, combination);
+//        output1.stream().forEach(singleList -> {
+//            System.out.println(singleList);
+//        });
     }
 
     // Element at any index can be picked any number of times. Below code depicts this scenario
