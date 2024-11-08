@@ -1,5 +1,7 @@
 package Tree;
 
+import java.util.ArrayDeque;
+
 public class InorderTraversal {
     public static void main(String[] args) {
         Node tree = new Node(10);
@@ -16,4 +18,21 @@ public class InorderTraversal {
         System.out.println(root.key);
         inOrderTraversal(root.right);
     }
+
+    private static void inOrderTraversalIterative(Node root) {
+        ArrayDeque<Node> stack = new ArrayDeque<>();
+        stack.push(root);
+        Node curr = root;
+        while (curr != null || !stack.isEmpty()) {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+            curr = stack.pop();
+            System.out.println(curr.key);
+            curr = curr.right;
+        }
+
+    }
+
 }
