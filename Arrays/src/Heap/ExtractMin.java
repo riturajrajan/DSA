@@ -3,7 +3,7 @@ package Heap;
 public class ExtractMin {
     public static void main(String[] args) {
         //We know from the property of heap that arr[0] always contains the min element in the heap. So, to achieve this we need to swap last element with first
-        //element and after doing this we need to call minHeapify function to place the element in correct position.
+        //element and after doing this we need to call minHeapify function to place the element in correct position. Time Complexity is O(logN)
         Heap minHeap = new Heap(10);
         minHeap.heap[0] = 20;
         minHeap.heap[1] = 25;
@@ -16,7 +16,7 @@ public class ExtractMin {
         minHeap.heap[8] = 70;
         minHeap.heap[9] = 60;
         extractMin(0, minHeap);
-        for(int i = 0; i < minHeap.size; i++) {
+        for(int i = 0; i < minHeap.size; i++) {     //arr[size] contains the removed min element
             System.out.println(minHeap.heap[i]);
         }
     }
